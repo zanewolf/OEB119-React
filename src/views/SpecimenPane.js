@@ -46,8 +46,8 @@ const WatermarkDiv = styled.div`
   opacity: 0.05;
   z-index: 5;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  width: 150%;
+  height: 150%;
   top: 0;
   left: 0;
   pointer-events : none;
@@ -85,7 +85,8 @@ const SpecimenPane = () => {
     return(
       <PaneWrapper>
           <Box sx={{display:'flex',justifyContent:'center'}}>
-            <ReactPlayer url={specimen.resource} playing loop/>
+            <ReactPlayer
+              url={specimen.resource} playing loop />
           </Box>
           <Box sx={{alignSelf:'center', marginTop: '3%'}}>
             <MetaData data={specimen}/>

@@ -44,14 +44,10 @@ const TreeBox = styled(Box)`
 
 export default function App(props) {
   const [lab, setLab] = useState(Object.keys(props.data.labs).sort((a, b) => a.slice(3)-b.slice(3))[0])
-
   const [node, setNode] = useState(Object.keys(props.data.labs[lab].nodes)[0])
-  console.log(node);
   const [id, setId] = useState(props.data.nodes[node].default)
-
   const [hover, setHover] = useState(id)
 
-  // console.log(lab);
 
   useEffect (() => {
     setNode(Object.keys(props.data.labs[lab].nodes)[0])

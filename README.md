@@ -1,2 +1,2 @@
-# lab-3D
-A virtual home for labs for OEB126
+# Original code for React App made by philsometimes, found here: https://github.com/philsometimes/lab-3D-db
+A virtual home for the class OEB 119, Deep Sea Biology. Work in Progress.  

@@ -1,0 +1,13 @@
+{
+  "courseID": "OEB 119",
+  "courseTitle": "Deep Sea Biology",
+  "people":{
+    "instructor": "Dr. Pete Girguis",
+    "text": "TFs",
+    "tf": "Zane",
+    "development":"Philip Fahn-Lai, Dr. Lauren Davidson"
+  },
+  "support":[
+    "Bok Learning Lab, Harvard MCZ"
+  ]
+}

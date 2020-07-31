@@ -13,7 +13,7 @@ const SourceLink = props =>
     }}
   />
 
-const TaxonHeading = props =>
+const NameHeading = props =>
   <Heading
     {...props}
     sx={{
@@ -26,7 +26,7 @@ const TaxonHeading = props =>
     }}
   />
 
-const AttributionInstitution = props =>
+const AttributionDescription = props =>
   <Text
     {...props}
     sx={{
@@ -38,39 +38,25 @@ const AttributionInstitution = props =>
     }}
   />
 
-const AttributionPeople = props =>
-  <Text
-    {...props}
-    sx={{
-      textTransform: 'uppercase',
-      letterSpacing: '2.5px',
-      color: 'ochre',
-      marginTop: '3px',
-      fontSize:['10px', '12px']
-    }}
-  />
-
 const MetaData = (props) => {
   const {metadata, resource} = props.data
-  const {taxon, attribution} = metadata
-  if (attribution.institution == "Museum of Comparative Zoology (MCZ)"){
+  const {header, description} = metadata
+  if (description == "Museum of Comparative Zoology (MCZ)"){
       return(
         <>
-          <TaxonHeading>
-              <em>{taxon}</em>
-          </TaxonHeading>
-        <AttributionInstitution>{attribution.institution}</AttributionInstitution>
-        <AttributionPeople>{attribution.people}</AttributionPeople>
+          <NameHeading>
+              <em>{header}</em>
+          </NameHeading>
+        <AttributionDescription>{description}</AttributionDescription>
         </>
       )}
   else {
       return(
         <>
-          <TaxonHeading>
-            <em>{taxon}</em>
-          </TaxonHeading>
-        <AttributionInstitution>{attribution.institution}</AttributionInstitution>
-        <AttributionPeople>{attribution.people}</AttributionPeople>
+          <NameHeading>
+            <em>{header}</em>
+          </NameHeading>
+        <AttributionDescription>{description}</AttributionDescription>
         <SourceLink href={resource} target="_blank">
           [link]
         </SourceLink>

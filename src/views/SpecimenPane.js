@@ -74,7 +74,7 @@ const SpecimenPane = () => {
     return(
       <PaneWrapper>
           <Box>
-            <Watermark props={specimen.metadata.attribution.institution}/>
+            <Watermark props={specimen.metadata.description}/>
             <SketchFabViewer url={specimen.resource} />
           </Box>
           <Box sx={{alignSelf:'center', marginTop: '3%'}}>
@@ -92,11 +92,21 @@ const SpecimenPane = () => {
             <MetaData data={specimen}/>
           </Box>
       </PaneWrapper>
+    )} else if (specimen.type==="file"){
+    return(
+      <PaneWrapper>
+          <Box sx={{display:'flex',justifyContent:'center'}}>
+            <Lightbox src={require("../data/"+specimen.resource)}/>
+          </Box>
+          <Box sx={{alignSelf:'center', marginTop: '3%'}}>
+            <MetaData data={specimen}/>
+          </Box>
+      </PaneWrapper>
     )} else {
     return(
       <PaneWrapper>
           <Box sx={{display:'flex',justifyContent:'center'}}>
-            <Lightbox src={specimen.resource} alt={specimen.metadata.taxon}/>
+            <Lightbox src={specimen.resource} />
           </Box>
           <Box sx={{alignSelf:'center', marginTop: '3%'}}>
             <MetaData data={specimen}/>

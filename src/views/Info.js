@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { Button, Link, Box, Flex, Image } from 'rebass/styled-components'
 import { DataContext, SetIdContext, IdContext, NodeContext, SetHoverContext } from '../Viewer'
 import { debounce } from "lodash";
-import Markdown from 'markdown-to-jsx'
+// import Markdown from 'markdown-to-jsx'
+import Markdown from 'react-markdown'
+
+
 
 const MarkdownWrapper = styled(Box)`
   & h1,h2,h3 {
@@ -79,6 +82,10 @@ const Info = ({show, handler}) => {
     )
   }
 
+  // const renderers: Markdown.Renderers = {
+  //   text: (props: string)
+  // }
+
   const components = {
     a:LinkCatcher
   }
@@ -87,9 +94,11 @@ const Info = ({show, handler}) => {
   return useMemo (()=> {
     return (
       <MarkdownWrapper>
-        <Markdown options={{overrides:{a:{component:LinkCatcher}}}}>
-          {Content}
-        </Markdown>
+        <Markdown
+        // <Markdown options={{overrides:{a:{component:LinkCatcher}}}}>
+          source = {Content}
+          renderers = {{link: LinkCatcher}}
+        />
       </MarkdownWrapper>
       )
     }, [node])

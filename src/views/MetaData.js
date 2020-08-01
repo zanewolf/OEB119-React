@@ -20,7 +20,7 @@ const NameHeading = props =>
       fontFamily: 'Poppins',
       fontWeight: 600,
       fontStyle: 'italic',
-      fontSize:['16px', '20px'],
+      fontSize:['20px', '22px'],
       letterSpacing:'0.5px',
       color: 'white'
     }}
@@ -32,9 +32,9 @@ const AttributionDescription = props =>
     sx={{
       textTransform: 'uppercase',
       letterSpacing: '2.5px',
-      color: 'amber',
+      color: 'lime',
       marginTop: '3px',
-      fontSize:['10px', '12px']
+      fontSize:['14px', '16px']
     }}
   />
 
@@ -57,9 +57,7 @@ const MetaData = (props) => {
             <em>{header}</em>
           </NameHeading>
         <AttributionDescription>{description}</AttributionDescription>
-        <SourceLink href={resource} target="_blank">
-          [link]
-        </SourceLink>
+
         </>
       )
     }

@@ -6,6 +6,7 @@ import { DataContext, IdContext } from '../Viewer'
 import SketchFabViewer from './SketchFabViewer';
 import MetaData from './MetaData';
 import watermark from '../assets/watermark.png'
+import pic from '../data/Technologies/Picture3.jpg';
 
 
 
@@ -96,7 +97,9 @@ const SpecimenPane = () => {
     return(
       <PaneWrapper>
           <Box sx={{display:'flex',justifyContent:'center'}}>
-            <Lightbox src={require("../data/"+specimen.resource)}/>
+            <Lightbox
+              // src={"../data/Technologies" + specimen.resource}/>
+              src={process.env.PUBLIC_URL+"/images/"+specimen.resource}/>
           </Box>
           <Box sx={{alignSelf:'center', marginTop: '3%'}}>
             <MetaData data={specimen}/>

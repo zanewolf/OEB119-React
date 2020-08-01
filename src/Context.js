@@ -15,7 +15,7 @@ const Loading = props =>
         fontSize: '30px',
         letterSpacing: '2px',
         textTransform: 'uppercase',
-        color: 'ochre'
+        color: 'aqua'
       }}
     />
 // console.log(firebase);

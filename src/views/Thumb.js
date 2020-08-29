@@ -61,14 +61,7 @@ const Thumb = (props) => {
     }
   },[hover])
   if (show){
-    return (
-      <ThumbBox sx={{
-        top:position.posY+5,
-        left:position.posX+5
-      }}>
-        <Image sx={{borderRadius:"8px",width:imgSz, boxShadow:"0px 3px 8px #A9A9A9", backgroundColor:"white"}} src={thumbnail}/>
-      </ThumbBox>
-    )
+    return null
   } else {
     return null
   }

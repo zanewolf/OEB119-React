@@ -6,7 +6,6 @@ import { DataContext, IdContext } from '../Viewer'
 import SketchFabViewer from './SketchFabViewer';
 import MetaData from './MetaData';
 import watermark from '../assets/watermark.png'
-import pic from '../data/Technologies/Picture3.jpg';
 
 
 
@@ -31,7 +30,7 @@ const Lightbox = styled(Image)`
 const PaneWrapper = ({children}) => {
   return(
     <Pane>
-      <Flex sx={{flexFlow:'column nowrap', position:'fixed', width:'inherit',top:'0%', justifyContent:'flex-start', alignItems:'stretch'}}>
+      <Flex sx={{flexFlow:'column nowrap', position:'fixed', width:'inherit',top:'5%', justifyContent:'flex-start', alignItems:'stretch'}}>
       {children}
       </Flex>
     </Pane>

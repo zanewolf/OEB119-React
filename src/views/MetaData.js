@@ -22,7 +22,8 @@ const NameHeading = props =>
       fontStyle: 'italic',
       fontSize:['20px', '22px'],
       letterSpacing:'0.5px',
-      color: 'white'
+      color: 'white',
+      marginLeft: '100px'
     }}
   />
 
@@ -30,10 +31,12 @@ const AttributionDescription = props =>
   <Text
     {...props}
     sx={{
+      width:['80%'],
       textTransform: 'uppercase',
       letterSpacing: '2.5px',
       color: 'lime',
       marginTop: '3px',
+      marginLeft:'100px',
       fontSize:['14px', '16px']
     }}
   />

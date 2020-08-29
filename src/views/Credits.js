@@ -51,7 +51,7 @@ export default function Credits(props){
     <CreditsFlex>
       <CreditsIcon
         src={Infosvg}
-        onMouseEnter={()=>{setHover(true)}}
+        onMouseEnter={()=>{setHover(false)}}
         onMouseLeave={()=>{setHover(false)}} />
       {hover
         ? <TextFlex><CreditsText><strong>Instructor:{'\u00A0'}{'\u00A0'}</strong>{instructor}</CreditsText>

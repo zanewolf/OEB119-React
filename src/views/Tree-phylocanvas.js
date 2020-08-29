@@ -1,7 +1,7 @@
 import React, {useContext, useEffect, useState} from 'react';
 import Modal from 'styled-react-modal'
 import { ModalProvider } from 'styled-react-modal'
-import {ReactComponent as Icon} from '../assets/tree-icon.svg'
+import {ReactComponent as Icon} from '../assets/angler-fish2.svg'
 import tree5nwk from '../data/trees/tree5.json'
 import tree6nwk from '../data/trees/tree6.json'
 
@@ -49,7 +49,6 @@ const Tree = (props) => {
                           showHistory={true}
                           showLabels={false}
                           />
-            {/*<Icon width={props.iconSize} onClick={toggleShow} style={{cursor:'pointer', left:'12.5%'}} />*/}
           </TreeModal>
     </ModalProvider>
   )

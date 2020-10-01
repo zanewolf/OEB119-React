@@ -72,7 +72,7 @@ const InfoPane = () => {
     <Pane>
       <Title><strong>{courseInfo.courseID}:{'\u00A0'}</strong>{courseInfo.courseTitle}</Title>
       <DropDown as='form'>
-        <Label htmlFor='labChoice'>LAB</Label>
+        <Label htmlFor='labChoice'>MODULE</Label>
         <Select
           id='labChoice'
           value={lab}
@@ -87,7 +87,7 @@ const InfoPane = () => {
         </Select>
       </DropDown>
       <DropDown as='form'>
-        <Label htmlFor='nodeChoice'>NODE</Label>
+        <Label htmlFor='nodeChoice'>SECTION</Label>
         <Select
           id='nodeChoice'
           value={node}
